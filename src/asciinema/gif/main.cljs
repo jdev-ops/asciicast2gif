@@ -137,7 +137,7 @@
                  (count delays-and-paths)
                  " screenshots into GIF file..."))
   (let [cmd (-> delays-and-paths all-frame-args (full-cmd out-path gifsicle-opts))]
-    (log/debug "Executing:" cmd)
+    (log/info "Executing:" cmd)
     (shell cmd)))
 
 (defn -main [& args]
